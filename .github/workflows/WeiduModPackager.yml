@@ -1,22 +1,17 @@
-name: 'WeiDU Mod Package Builder (iemod; win/lin/mac: amd64; use tp2 VERSION suffix)'
+name: 'WeiDU Mod Package Builder (test)'
 
 on:
-  # release:
-    # types: [published]
+  release:
+    types: [published]
   workflow_dispatch:
 
 jobs:
   call_workflow:
-    strategy:
-      matrix:
-        type: [iemod]
-        # type: [iemod, windows, linux, macos]
-
     permissions:
       contents: write
 
     uses: argent77test/TestActionGlobal/.github/workflows/TestActionGlobal.yml@master
     with:
-      type: ${{ matrix.type }}
+      type: iemod
       architecture: amd64
       suffix: 'v0.9 (beta)'
