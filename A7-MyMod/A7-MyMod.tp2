@@ -1,0 +1,21 @@
+BACKUP ~weidu_external/backup/A7-MyMod~
+AUTHOR ~Myself~
+VERSION ~v1.0~
+
+ALWAYS
+  // root folder for mutable data
+  OUTER_TEXT_SPRINT WORK_FOLDER ~weidu_external~
+
+  ACTION_IF ((FILE_EXISTS ~dlc/sod-dlc.zip~) OR (FILE_EXISTS ~sod-dlc.zip~)) THEN BEGIN
+    FAIL ~DLC Merger is required before mods can be installed on this game. Check the readme for more information and a link to download DLC Merger.~
+  END
+END
+
+LANGUAGE ~English~
+         ~english~
+         ~A7-MyMod/tra/english/setup.tra~
+
+BEGIN @0  // Test component
+NO_LOG_RECORD
+
+PRINT ~Test component executed successfully.~
