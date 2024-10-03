@@ -26,6 +26,6 @@ jobs:
 
     uses: argent77test/TestActionGlobal/.github/workflows/TestActionGlobal.yml@master
     with:
-      type: win
+      type: windows
       architecture: x86
       suffix: version
