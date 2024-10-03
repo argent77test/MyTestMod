@@ -9,8 +9,8 @@ jobs:
   call_workflow:
     strategy:
       matrix:
-        # type: [iemod, windows, linux, macos]
         type: [iemod]
+        # type: [iemod, windows, linux, macos]
 
     permissions:
       contents: write
