@@ -1,15 +1,16 @@
 name: 'WeiDU Mod Package Builder (iemod; win/lin/mac: amd64; use tp2 VERSION suffix)'
 
 on:
-  release:
-    types: [published]
+  # release:
+    # types: [published]
   workflow_dispatch:
 
 jobs:
   call_workflow:
     strategy:
       matrix:
-        type: [iemod, windows, linux, macos]
+        # type: [iemod, windows, linux, macos]
+        type: [iemod]
 
     permissions:
       contents: write
@@ -18,4 +19,4 @@ jobs:
     with:
       type: ${{ matrix.type }}
       architecture: amd64
-      suffix: version
+      suffix: 'v0.9 (beta)'
