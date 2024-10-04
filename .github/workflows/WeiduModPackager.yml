@@ -14,8 +14,14 @@ jobs:
     permissions:
       contents: write
 
-    uses: InfinityTools/WeiduModPackagerLibrary/.github/workflows/WeiduModPackagerLibrary.yml@master
+    uses: argent77test/TestActionGlobal/.github/workflows/TestActionGlobal.yml@master
     with:
       type: ${{ matrix.type }}
-      architecture: amd64
-      suffix: 'v0.9 (beta)'
+      architecture: x86
+      suffix: latest
+      extra: special
+      naming: ini
+      weidu_version: 247
+      prefix_windows: w32
+      prefix_linux: lnx
+      prefix_macos: mac
