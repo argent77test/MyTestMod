@@ -17,11 +17,7 @@ jobs:
     uses: argent77test/TestActionGlobal/.github/workflows/TestActionGlobal.yml@master
     with:
       type: ${{ matrix.type }}
-      architecture: x86
-      suffix: latest
-      extra: special
+      architecture: amd64
+      suffix: ${{ github.event.release.tag_name }}
       naming: ini
-      weidu_version: 247
-      prefix_windows: w32
-      prefix_linux: lnx
-      prefix_macos: mac
+      weidu_version: latest
