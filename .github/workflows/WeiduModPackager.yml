@@ -1,4 +1,4 @@
-name: 'WeiDU Mod Package Builder (iemod; win/lin/mac: amd64; use tp2 VERSION suffix)'
+name: 'WeiDU Mod Package Builder (iemod; multi: amd64; use tp2 VERSION suffix)'
 
 on:
   release:
@@ -9,7 +9,7 @@ jobs:
   call_workflow:
     strategy:
       matrix:
-        type: [iemod, windows, linux, macos]
+        type: [iemod, multi]
 
     permissions:
       contents: write
@@ -17,7 +17,7 @@ jobs:
     uses: argent77test/TestActionGlobal/.github/workflows/TestActionGlobal.yml@master
     with:
       type: ${{ matrix.type }}
-      architecture: x86
+      architecture: amd64
       suffix: ${{ github.event.release.tag_name }}
       naming: ini
       weidu_version: latest
