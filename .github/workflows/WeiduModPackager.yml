@@ -21,3 +21,4 @@ jobs:
       suffix: ${{ github.event.release.tag_name }}
       naming: ini
       weidu_version: latest
+      multi_autoupdate: false
