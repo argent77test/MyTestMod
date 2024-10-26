@@ -21,4 +21,5 @@ jobs:
       suffix: version
       naming: ini
       weidu_version: latest
+      multi_platforms: 'windows:macos'
       multi_autoupdate: false
