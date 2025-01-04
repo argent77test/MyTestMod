@@ -1,0 +1,3 @@
+[submodule "A7-MyMod/lib/bgforge"]
+	path = A7-MyMod/lib/bgforge
+	url = https://github.com/BGforgeNet/BGforge-MLS-IElib.git
